@@ -56,10 +56,18 @@ jobs:
     runs-on: ubuntu-latest
     needs: build
     if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    env:
+      REGISTRY: ghcr.io
+      IMAGE_NAME: ${{ github.repository }}
+      GITHUB_SHA: ${{ github.sha }}
 
     steps:
       - name: Deploy via SSH
         uses: appleboy/ssh-action@v1.0.0
+        env:
+          REGISTRY: ghcr.io
+          IMAGE_NAME: ${{ github.repository }}
+          GITHUB_SHA: ${{ github.sha }}
         with:
           host: ${{ secrets.HOST }}
           username: ${{ secrets.USERNAME }}
@@ -68,13 +76,13 @@ jobs:
           envs: GITHUB_TOKEN,REGISTRY,IMAGE_NAME,GITHUB_SHA
           script_stop: true
           script: |
-            echo $GITHUB_TOKEN | docker login $REGISTRY -u ${{ github.actor }} --password-stdin
-            docker pull $REGISTRY/$IMAGE_NAME:$GITHUB_SHA
+            echo "$GITHUB_TOKEN" | docker login ghcr.io -u Alexsey111 --password-stdin
+            docker pull ghcr.io/$IMAGE_NAME:$GITHUB_SHA
             docker stop time-server || true
             docker rm time-server || true
             docker run -d \
               --name time-server \
               -p 8000:8000 \
               --restart unless-stopped \
-              $REGISTRY/$IMAGE_NAME:$GITHUB_SHA
+              ghcr.io/$IMAGE_NAME:$GITHUB_SHA
             docker system prune -f
