@@ -72,8 +72,9 @@ jobs:
           username: ${{ secrets.USERNAME }}
           key: ${{ secrets.SSH_KEY }}
           port: ${{ secrets.PORT }}
-          envs: GITHUB_TOKEN,IMAGE_TAG
+          allenvs: true
           script: |
+            IMAGE_TAG="ghcr.io/alexsey111/test_mcp:${{ github.sha }}"
             echo "$GITHUB_TOKEN" | docker login ghcr.io -u Alexsey111 --password-stdin
             docker pull "$IMAGE_TAG"
             docker stop time-server || true
