@@ -57,3 +57,4 @@ git push -u origin main
 ```
 
 После пуша перейди во вкладку **Actions**, чтобы увидеть запущенный workflow.
+
