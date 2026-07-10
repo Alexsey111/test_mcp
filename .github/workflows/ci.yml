@@ -83,7 +83,7 @@ jobs:
             docker rm time-server || true &&
             docker run -d \\
               --name time-server \\
-              -p 8000:8000 \\
+              -p 8001:8000 \\
               --restart unless-stopped \\
               $DEPLOY_IMAGE &&
             docker system prune -f
