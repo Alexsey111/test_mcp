@@ -67,20 +67,24 @@ jobs:
           mkdir -p ~/.ssh
           printf '%s' "${{ secrets.SSH_KEY }}" > ~/.ssh/deploy_key
           chmod 600 ~/.ssh/deploy_key
-          ssh-keyscan -H ${{ secrets.HOST }} >> ~/.ssh/known_hosts
 
       - name: Deploy via SSH
+        env:
+          DEPLOY_HOST: ${{ secrets.HOST }}
+          DEPLOY_USER: ${{ secrets.USERNAME }}
+          DEPLOY_PORT: ${{ secrets.PORT }}
+          DEPLOY_IMAGE: ${{ needs.build.outputs.image_tag }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          IMAGE_TAG="${{ needs.build.outputs.image_tag }}"
-          ssh -i ~/.ssh/deploy_key -o StrictHostKeyChecking=no -p ${{ secrets.PORT }} ${{ secrets.USERNAME }}@${{ secrets.HOST }} "
-            echo '${{ secrets.GITHUB_TOKEN }}' | docker login ghcr.io -u Alexsey111 --password-stdin &&
-            docker pull $IMAGE_TAG &&
+          ssh -i ~/.ssh/deploy_key -o StrictHostKeyChecking=no -p "$DEPLOY_PORT" "$DEPLOY_USER@$DEPLOY_HOST" "
+            echo '$GH_TOKEN' | docker login ghcr.io -u Alexsey111 --password-stdin &&
+            docker pull $DEPLOY_IMAGE &&
             docker stop time-server || true &&
             docker rm time-server || true &&
             docker run -d \\
               --name time-server \\
               -p 8000:8000 \\
               --restart unless-stopped \\
-              $IMAGE_TAG &&
+              $DEPLOY_IMAGE &&
             docker system prune -f
           "
