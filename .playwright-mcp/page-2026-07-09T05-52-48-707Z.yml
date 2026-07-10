@@ -1,0 +1,213 @@
+- generic [active] [ref=f6e1]:
+  - banner [ref=f6e2]:
+    - navigation [ref=f6e3]:
+      - link "Магазин цветов" [ref=f6e4] [cursor=pointer]:
+        - /url: /
+      - list [ref=f6e6]:
+        - listitem [ref=f6e7]:
+          - link "Домой" [ref=f6e8] [cursor=pointer]:
+            - /url: /
+        - listitem [ref=f6e9]:
+          - link "Вход" [ref=f6e10] [cursor=pointer]:
+            - /url: /accounts/login/
+        - listitem [ref=f6e11]:
+          - link "Регистрация" [ref=f6e12] [cursor=pointer]:
+            - /url: /users/signup/
+  - main [ref=f6e13]:
+    - generic [ref=f6e14]:
+      - link "Перейти к сортировке товаров" [ref=f6e16] [cursor=pointer]:
+        - /url: /products/products/
+      - generic [ref=f6e17]:
+        - generic [ref=f6e19]:
+          - img "Rose Bouquet" [ref=f6e20]
+          - generic [ref=f6e21]:
+            - heading "Rose Bouquet" [level=5] [ref=f6e22]
+            - paragraph [ref=f6e23]:
+              - strong [ref=f6e24]: 2900,00 руб.
+            - button "Добавить в корзину" [ref=f6e26] [cursor=pointer]
+            - heading "Отзывы:" [level=6] [ref=f6e27]
+            - paragraph [ref=f6e28]: Отзывов пока нет.
+            - generic [ref=f6e29]:
+              - generic [ref=f6e30]:
+                - generic [ref=f6e31]: Отзыв
+                - textbox "Отзыв Отзыв Отзыв Отзыв Отзыв Отзыв Отзыв Отзыв Отзыв" [ref=f6e32]:
+                  - /placeholder: Напишите ваш отзыв...
+              - generic [ref=f6e33]:
+                - generic [ref=f6e34]: Оценка
+                - spinbutton "Оценка Оценка Оценка Оценка Оценка Оценка Оценка Оценка Оценка" [ref=f6e35]
+              - button "Отправить отзыв" [ref=f6e36] [cursor=pointer]
+          - link "Подробнее" [ref=f6e38] [cursor=pointer]:
+            - /url: /products/product/1/
+        - generic [ref=f6e40]:
+          - img "Tulip Bouquet" [ref=f6e41]
+          - generic [ref=f6e42]:
+            - heading "Tulip Bouquet" [level=5] [ref=f6e43]
+            - paragraph [ref=f6e44]:
+              - strong [ref=f6e45]: 1900,00 руб.
+            - button "Добавить в корзину" [ref=f6e47] [cursor=pointer]
+            - heading "Отзывы:" [level=6] [ref=f6e48]
+            - paragraph [ref=f6e49]: Отзывов пока нет.
+            - generic [ref=f6e50]:
+              - generic [ref=f6e51]:
+                - generic [ref=f6e52]: Отзыв
+                - textbox "Напишите ваш отзыв..." [ref=f6e53]
+              - generic [ref=f6e54]:
+                - generic [ref=f6e55]: Оценка
+                - spinbutton [ref=f6e56]
+              - button "Отправить отзыв" [ref=f6e57] [cursor=pointer]
+          - link "Подробнее" [ref=f6e59] [cursor=pointer]:
+            - /url: /products/product/2/
+        - generic [ref=f6e61]:
+          - img "Lily Bouquet" [ref=f6e62]
+          - generic [ref=f6e63]:
+            - heading "Lily Bouquet" [level=5] [ref=f6e64]
+            - paragraph [ref=f6e65]:
+              - strong [ref=f6e66]: 2400,00 руб.
+            - button "Добавить в корзину" [ref=f6e68] [cursor=pointer]
+            - heading "Отзывы:" [level=6] [ref=f6e69]
+            - paragraph [ref=f6e70]: Отзывов пока нет.
+            - generic [ref=f6e71]:
+              - generic [ref=f6e72]:
+                - generic [ref=f6e73]: Отзыв
+                - textbox "Напишите ваш отзыв..." [ref=f6e74]
+              - generic [ref=f6e75]:
+                - generic [ref=f6e76]: Оценка
+                - spinbutton [ref=f6e77]
+              - button "Отправить отзыв" [ref=f6e78] [cursor=pointer]
+          - link "Подробнее" [ref=f6e80] [cursor=pointer]:
+            - /url: /products/product/3/
+        - generic [ref=f6e82]:
+          - img "Sunflower Bouquet" [ref=f6e83]
+          - generic [ref=f6e84]:
+            - heading "Sunflower Bouquet" [level=5] [ref=f6e85]
+            - paragraph [ref=f6e86]:
+              - strong [ref=f6e87]: 3400,00 руб.
+            - button "Добавить в корзину" [ref=f6e89] [cursor=pointer]
+            - heading "Отзывы:" [level=6] [ref=f6e90]
+            - paragraph [ref=f6e91]: Отзывов пока нет.
+            - generic [ref=f6e92]:
+              - generic [ref=f6e93]:
+                - generic [ref=f6e94]: Отзыв
+                - textbox "Напишите ваш отзыв..." [ref=f6e95]
+              - generic [ref=f6e96]:
+                - generic [ref=f6e97]: Оценка
+                - spinbutton [ref=f6e98]
+              - button "Отправить отзыв" [ref=f6e99] [cursor=pointer]
+          - link "Подробнее" [ref=f6e101] [cursor=pointer]:
+            - /url: /products/product/4/
+        - generic [ref=f6e103]:
+          - img "Daisy Bouquet" [ref=f6e104]
+          - generic [ref=f6e105]:
+            - heading "Daisy Bouquet" [level=5] [ref=f6e106]
+            - paragraph [ref=f6e107]:
+              - strong [ref=f6e108]: 1400,00 руб.
+            - button "Добавить в корзину" [ref=f6e110] [cursor=pointer]
+            - heading "Отзывы:" [level=6] [ref=f6e111]
+            - paragraph [ref=f6e112]: Отзывов пока нет.
+            - generic [ref=f6e113]:
+              - generic [ref=f6e114]:
+                - generic [ref=f6e115]: Отзыв
+                - textbox "Напишите ваш отзыв..." [ref=f6e116]
+              - generic [ref=f6e117]:
+                - generic [ref=f6e118]: Оценка
+                - spinbutton [ref=f6e119]
+              - button "Отправить отзыв" [ref=f6e120] [cursor=pointer]
+          - link "Подробнее" [ref=f6e122] [cursor=pointer]:
+            - /url: /products/product/5/
+        - generic [ref=f6e124]:
+          - img "Orchid Bouquet" [ref=f6e125]
+          - generic [ref=f6e126]:
+            - heading "Orchid Bouquet" [level=5] [ref=f6e127]
+            - paragraph [ref=f6e128]:
+              - strong [ref=f6e129]: 3900,00 руб.
+            - button "Добавить в корзину" [ref=f6e131] [cursor=pointer]
+            - heading "Отзывы:" [level=6] [ref=f6e132]
+            - paragraph [ref=f6e133]: Отзывов пока нет.
+            - generic [ref=f6e134]:
+              - generic [ref=f6e135]:
+                - generic [ref=f6e136]: Отзыв
+                - textbox "Напишите ваш отзыв..." [ref=f6e137]
+              - generic [ref=f6e138]:
+                - generic [ref=f6e139]: Оценка
+                - spinbutton [ref=f6e140]
+              - button "Отправить отзыв" [ref=f6e141] [cursor=pointer]
+          - link "Подробнее" [ref=f6e143] [cursor=pointer]:
+            - /url: /products/product/6/
+        - generic [ref=f6e145]:
+          - img "Carnation Bouquet" [ref=f6e146]
+          - generic [ref=f6e147]:
+            - heading "Carnation Bouquet" [level=5] [ref=f6e148]
+            - paragraph [ref=f6e149]:
+              - strong [ref=f6e150]: 1800,00 руб.
+            - button "Добавить в корзину" [ref=f6e152] [cursor=pointer]
+            - heading "Отзывы:" [level=6] [ref=f6e153]
+            - paragraph [ref=f6e154]: Отзывов пока нет.
+            - generic [ref=f6e155]:
+              - generic [ref=f6e156]:
+                - generic [ref=f6e157]: Отзыв
+                - textbox "Напишите ваш отзыв..." [ref=f6e158]
+              - generic [ref=f6e159]:
+                - generic [ref=f6e160]: Оценка
+                - spinbutton [ref=f6e161]
+              - button "Отправить отзыв" [ref=f6e162] [cursor=pointer]
+          - link "Подробнее" [ref=f6e164] [cursor=pointer]:
+            - /url: /products/product/7/
+        - generic [ref=f6e166]:
+          - img "Peony Bouquet" [ref=f6e167]
+          - generic [ref=f6e168]:
+            - heading "Peony Bouquet" [level=5] [ref=f6e169]
+            - paragraph [ref=f6e170]:
+              - strong [ref=f6e171]: 2500,00 руб.
+            - button "Добавить в корзину" [ref=f6e173] [cursor=pointer]
+            - heading "Отзывы:" [level=6] [ref=f6e174]
+            - paragraph [ref=f6e175]: Отзывов пока нет.
+            - generic [ref=f6e176]:
+              - generic [ref=f6e177]:
+                - generic [ref=f6e178]: Отзыв
+                - textbox "Напишите ваш отзыв..." [ref=f6e179]
+              - generic [ref=f6e180]:
+                - generic [ref=f6e181]: Оценка
+                - spinbutton [ref=f6e182]
+              - button "Отправить отзыв" [ref=f6e183] [cursor=pointer]
+          - link "Подробнее" [ref=f6e185] [cursor=pointer]:
+            - /url: /products/product/8/
+        - generic [ref=f6e187]:
+          - img "Chrysanthemum Bouquet" [ref=f6e188]
+          - generic [ref=f6e189]:
+            - heading "Chrysanthemum Bouquet" [level=5] [ref=f6e190]
+            - paragraph [ref=f6e191]:
+              - strong [ref=f6e192]: 2200,00 руб.
+            - button "Добавить в корзину" [ref=f6e194] [cursor=pointer]
+            - heading "Отзывы:" [level=6] [ref=f6e195]
+            - paragraph [ref=f6e196]: Отзывов пока нет.
+            - generic [ref=f6e197]:
+              - generic [ref=f6e198]:
+                - generic [ref=f6e199]: Отзыв
+                - textbox "Напишите ваш отзыв..." [ref=f6e200]
+              - generic [ref=f6e201]:
+                - generic [ref=f6e202]: Оценка
+                - spinbutton [ref=f6e203]
+              - button "Отправить отзыв" [ref=f6e204] [cursor=pointer]
+          - link "Подробнее" [ref=f6e206] [cursor=pointer]:
+            - /url: /products/product/9/
+      - navigation "Page navigation" [ref=f6e208]:
+        - list [ref=f6e209]:
+          - listitem [ref=f6e210]:
+            - link "1" [ref=f6e211] [cursor=pointer]:
+              - /url: "?page=1"
+          - listitem [ref=f6e212]:
+            - link "2" [ref=f6e213] [cursor=pointer]:
+              - /url: "?page=2"
+          - listitem [ref=f6e214]:
+            - link "3" [ref=f6e215] [cursor=pointer]:
+              - /url: "?page=3"
+          - listitem [ref=f6e216]:
+            - link "Next" [ref=f6e217] [cursor=pointer]:
+              - /url: "?page=2"
+              - text: »
+          - listitem [ref=f6e218]:
+            - link "Last" [ref=f6e219] [cursor=pointer]:
+              - /url: "?page=3"
+              - text: »»
+  - contentinfo [ref=f6e220]:
+    - paragraph [ref=f6e222]: © 2024 Магазин цветов

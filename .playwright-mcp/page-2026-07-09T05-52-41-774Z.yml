@@ -1,0 +1,40 @@
+- generic [active] [ref=f5e1]:
+  - banner [ref=f5e2]:
+    - heading "Page not found (404)" [level=1] [ref=f5e3]
+    - table [ref=f5e4]:
+      - rowgroup [ref=f5e5]:
+        - 'row "Request Method: GET" [ref=f5e6]':
+          - rowheader "Request Method:" [ref=f5e7]
+          - cell "GET" [ref=f5e8]
+        - 'row "Request URL: http://127.0.0.1:8000/nonexistent-page-12345/" [ref=f5e9]':
+          - rowheader "Request URL:" [ref=f5e10]
+          - cell "http://127.0.0.1:8000/nonexistent-page-12345/" [ref=f5e11]
+  - main [ref=f5e12]:
+    - paragraph [ref=f5e13]:
+      - text: Using the URLconf defined in
+      - code [ref=f5e14]: flower_project.urls
+      - text: ", Django tried these URL patterns, in this order:"
+    - list [ref=f5e15]:
+      - listitem [ref=f5e16]:
+        - code [ref=f5e17]: admin/
+      - listitem [ref=f5e18]:
+        - code [ref=f5e19]: users/
+      - listitem [ref=f5e20]:
+        - code [ref=f5e21]: accounts/
+      - listitem [ref=f5e22]:
+        - code [ref=f5e23]: products/
+      - listitem [ref=f5e24]:
+        - code [ref=f5e25]: "[name='index']"
+      - listitem [ref=f5e26]:
+        - code [ref=f5e27]: ^media/(?P<path>.*)$
+    - paragraph [ref=f5e28]:
+      - text: The current path,
+      - code [ref=f5e29]: nonexistent-page-12345/
+      - text: ", didn’t match any of these."
+  - contentinfo [ref=f5e30]:
+    - paragraph [ref=f5e31]:
+      - text: You’re seeing this error because you have
+      - code [ref=f5e32]: DEBUG = True
+      - text: in your Django settings file. Change that to
+      - code [ref=f5e33]: "False"
+      - text: ", and Django will display a standard 404 page."

@@ -1,0 +1,151 @@
+- generic [active] [ref=f5e1]:
+  - banner [ref=f5e2]:
+    - generic [ref=f5e4]:
+      - generic [ref=f5e5]:
+        - link "RU Об университете" [ref=f5e6] [cursor=pointer]:
+          - /url: /ob-universitete/
+          - img "RU" [ref=f5e7]
+          - text: Об университете
+        - link "EN About the University" [ref=f5e8] [cursor=pointer]:
+          - /url: /ob-universitete/en
+          - img "EN" [ref=f5e9]
+          - text: About the University
+        - link "IN विश्वविद्यालय के बारे में" [ref=f5e10] [cursor=pointer]:
+          - /url: /ob-universitete/hindi
+          - img "IN" [ref=f5e11]
+          - text: विश्वविद्यालय के बारे में
+        - link "عن الجامعة ARAB" [ref=f5e12] [cursor=pointer]:
+          - /url: /ob-universitete/arab/index.php
+          - text: عن الجامعة
+          - img "ARAB" [ref=f5e13]
+      - generic [ref=f5e14]:
+        - img [ref=f5e16]
+        - img [ref=f5e18]
+        - img [ref=f5e20]
+    - generic [ref=f5e21]:
+      - generic:
+        - generic [ref=f5e22]:
+          - img [ref=f5e23]
+          - generic "Личный кабинет для студентов и сотрудников" [ref=f5e24]: Личный кабинет
+        - generic [ref=f5e25]:
+          - generic "Поиск по сайту" [ref=f5e26]:
+            - link [ref=f5e27] [cursor=pointer]:
+              - /url: /poisk-po-saytu/
+              - img [ref=f5e28]
+          - link "Для слабовидящих" [ref=f5e30] [cursor=pointer]:
+            - /url: /?=start=09
+            - img "Для слабовидящих" [ref=f5e31]
+        - generic "Английская версия сайта" [ref=f5e34]: EN
+    - generic [ref=f5e36]:
+      - generic [ref=f5e37]:
+        - img [ref=f5e38]
+        - generic [ref=f5e39]: АЛТАЙСКИЙ ГОСУДАРСТВЕННЫЙ МЕДИЦИНСКИЙ УНИВЕРСИТЕТ
+        - img [ref=f5e40]
+      - generic [ref=f5e42]:
+        - text: 
+        - navigation [ref=f5e44]:
+          - text: 
+          - list [ref=f5e45]:
+            - listitem [ref=f5e46]:
+              - link "Поступающему" [ref=f5e47] [cursor=pointer]:
+                - /url: "#"
+            - listitem [ref=f5e48]:
+              - link "Обучающемуся" [ref=f5e49] [cursor=pointer]:
+                - /url: "#"
+            - listitem [ref=f5e50]:
+              - link "Школьнику" [ref=f5e51] [cursor=pointer]:
+                - /url: "#"
+            - listitem [ref=f5e52]:
+              - link "Врачу" [ref=f5e53] [cursor=pointer]:
+                - /url: "#"
+            - listitem [ref=f5e54]:
+              - link "ДПО" [ref=f5e55] [cursor=pointer]:
+                - /url: "#"
+            - listitem [ref=f5e56]:
+              - link "Клиники" [ref=f5e57] [cursor=pointer]:
+                - /url: "#"
+            - listitem [ref=f5e58]:
+              - link "Сотруднику" [ref=f5e59] [cursor=pointer]:
+                - /url: "#"
+              - text:  
+        - img [ref=f5e60]
+        - generic [ref=f5e61]:
+          - navigation [ref=f5e62]:
+            - list [ref=f5e63]:
+              - listitem [ref=f5e64]:
+                - link "Сведения об образовательной организации" [ref=f5e65] [cursor=pointer]:
+                  - /url: "#"
+              - listitem [ref=f5e66]:
+                - link "Электронная приемная" [ref=f5e67] [cursor=pointer]:
+                  - /url: /internet-priemnaya2/
+              - listitem [ref=f5e68]:
+                - link "Приемная комиссия +7(3852) 757900" [ref=f5e69] [cursor=pointer]:
+                  - /url: /abitur/?TAB=FIRST
+          - link "Авторизация переехала в конец страницы" [ref=f5e71] [cursor=pointer]:
+            - /url: "#auth"
+            - img [ref=f5e72]
+  - generic [ref=f5e76]: Главная страница
+  - generic [ref=f5e77]:
+    - paragraph
+    - heading "Страница не найдена." [level=1] [ref=f5e78]
+    - link "Перейти на главную страницу сайта" [ref=f5e79] [cursor=pointer]:
+      - /url: \
+  - contentinfo [ref=f5e80]:
+    - generic [ref=f5e81]:
+      - img [ref=f5e83]
+      - generic [ref=f5e84]:
+        - img [ref=f5e86]
+        - generic [ref=f5e87]:
+          - generic [ref=f5e89]:
+            - link "Контакты" [ref=f5e90] [cursor=pointer]:
+              - /url: /ob-universitete/kontakty/index.php
+              - generic [ref=f5e91]: Контакты
+            - link "Пресс-центр" [ref=f5e92] [cursor=pointer]:
+              - /url: /press-tsentr/
+              - generic [ref=f5e93]: Пресс-центр
+            - link "Наука и инновации" [ref=f5e94] [cursor=pointer]:
+              - /url: /nauka-i-innovatsii/
+              - generic [ref=f5e95]: Наука и инновации
+            - link "Инклюзивное образование" [ref=f5e96] [cursor=pointer]:
+              - /url: /ob-universitete/inklyuzivnoe-obrazovanie
+              - generic [ref=f5e97]: Инклюзивное образование
+            - link "Наставничество" [ref=f5e98] [cursor=pointer]:
+              - /url: /ob-universitete/nastavnichestvo
+              - generic [ref=f5e99]: Наставничество
+          - generic [ref=f5e100]:
+            - paragraph [ref=f5e101]: ФГБОУ ВО “Алтайский государственный медицинский университет”
+            - paragraph [ref=f5e102]: 656038, Барнаул, пр. Ленина, 40
+    - generic [ref=f5e104]:
+      - generic [ref=f5e106]:
+        - img [ref=f5e109]
+        - paragraph [ref=f5e111]: Министерство здравоохранения Российской Федерации
+      - generic [ref=f5e113]:
+        - img [ref=f5e116]
+        - paragraph [ref=f5e118]: Министерство образования и науки Алтайского края
+      - generic [ref=f5e120]:
+        - img [ref=f5e123]
+        - paragraph [ref=f5e125]: Министерство здравоохранения Алтайского края
+      - generic [ref=f5e127]:
+        - img [ref=f5e130]
+        - paragraph [ref=f5e132]: Министерство просвещения Российской Федерации
+      - generic [ref=f5e134]:
+        - img [ref=f5e137]
+        - paragraph [ref=f5e139]: Федеральная служба по надзору в сфере образования и науки
+      - generic [ref=f5e141]:
+        - img [ref=f5e144]
+        - paragraph [ref=f5e146]: Правительство Алтайского края
+      - generic [ref=f5e148]:
+        - img [ref=f5e151]
+        - paragraph [ref=f5e153]: Министерство науки и высшего образования Российской Федерации
+      - generic [ref=f5e154]:
+        - text: "Ваш IP: 188.162.14.68"
+        - link "Старый сайт" [ref=f5e156] [cursor=pointer]:
+          - /url: https://www.agmu.ru/about/
+        - generic [ref=f5e157]: Если Вы заметили в тексте опечатку, выделите ее и нажмите Ctrl+Enter
+        - generic [ref=f5e158]: "По техническим вопросам работы с интернет-сервисами обращайтесь в управление информатизации АГМУ по E-mail: support@asmu.ru"
+        - link "О противодействии коррупции" [ref=f5e160] [cursor=pointer]:
+          - /url: /anticorruption
+          - generic [ref=f5e161]: О противодействии коррупции
+      - link "Вход на сайт" [ref=f5e163] [cursor=pointer]:
+        - /url: /auth/?login&backurl=%2Fnetsuchtakoystranitsy%2F
+    - generic [ref=f5e164]: w=1050 h=956
