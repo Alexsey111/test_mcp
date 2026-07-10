@@ -18,6 +18,9 @@ jobs:
       contents: read
       packages: write
 
+    outputs:
+      image_tag: ${{ steps.image_tag.outputs.tag }}
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -65,16 +68,14 @@ jobs:
     steps:
       - name: Deploy via SSH
         uses: appleboy/ssh-action@v1.2.2
-        env:
-          IMAGE_TAG: ghcr.io/alexsey111/test_mcp:${{ github.sha }}
         with:
           host: ${{ secrets.HOST }}
           username: ${{ secrets.USERNAME }}
           key: ${{ secrets.SSH_KEY }}
           port: ${{ secrets.PORT }}
-          allenvs: true
+          envs: GITHUB_TOKEN,IMAGE_TAG
+          envs_format: github-action
           script: |
-            IMAGE_TAG="ghcr.io/alexsey111/test_mcp:${{ github.sha }}"
             echo "$GITHUB_TOKEN" | docker login ghcr.io -u Alexsey111 --password-stdin
             docker pull "$IMAGE_TAG"
             docker stop time-server || true
@@ -85,3 +86,6 @@ jobs:
               --restart unless-stopped \
               "$IMAGE_TAG"
             docker system prune -f
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          IMAGE_TAG: ${{ needs.build.outputs.image_tag }}
