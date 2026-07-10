@@ -14,6 +14,26 @@
         "type": "loki",
         "uid": "loki"
       },
+      "gridPos": {
+        "h": 2,
+        "w": 24,
+        "x": 0,
+        "y": 0
+      },
+      "id": 3,
+      "options": {
+        "content": "# Time Server Logs\n\nМониторинг логов FastAPI-сервиса времени",
+        "mode": "markdown"
+      },
+      "pluginVersion": "10.1.0",
+      "title": "Заголовок",
+      "type": "text"
+    },
+    {
+      "datasource": {
+        "type": "loki",
+        "uid": "loki"
+      },
       "fieldConfig": {
         "defaults": {},
         "overrides": []
@@ -22,7 +42,7 @@
         "h": 10,
         "w": 24,
         "x": 0,
-        "y": 0
+        "y": 2
       },
       "id": 1,
       "options": {
@@ -50,6 +70,41 @@
         "uid": "loki"
       },
       "fieldConfig": {
+        "defaults": {},
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 10,
+        "w": 12,
+        "x": 0,
+        "y": 12
+      },
+      "id": 4,
+      "options": {
+        "showTime": true,
+        "wrapLogMessage": true,
+        "sortOrder": "Descending"
+      },
+      "pluginVersion": "10.1.0",
+      "targets": [
+        {
+          "datasource": {
+            "type": "loki",
+            "uid": "loki"
+          },
+          "expr": "{app=\"time-server\", category=\"time\"}",
+          "refId": "A"
+        }
+      ],
+      "title": "Логи времени сервера",
+      "type": "logs"
+    },
+    {
+      "datasource": {
+        "type": "loki",
+        "uid": "loki"
+      },
+      "fieldConfig": {
         "defaults": {
           "color": {
             "mode": "palette-classic"
@@ -68,8 +123,8 @@
       "gridPos": {
         "h": 10,
         "w": 12,
-        "x": 0,
-        "y": 10
+        "x": 12,
+        "y": 12
       },
       "id": 2,
       "options": {
@@ -91,7 +146,7 @@
             "type": "loki",
             "uid": "loki"
           },
-          "expr": "sum by (level) (count_over_time({app=\"time-server\"} [$__interval]))",
+          "expr": "sum by (level) (count_over_time({app=\"time-server\"} [1h]))",
           "refId": "A"
         }
       ],
@@ -114,6 +169,6 @@
   "timezone": "browser",
   "title": "Time Server Logs",
   "uid": "time-server-logs",
-  "version": 1,
+  "version": 2,
   "weekStart": ""
 }

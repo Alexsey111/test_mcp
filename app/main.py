@@ -54,19 +54,19 @@ def root():
 
 @app.get("/time")
 def get_time():
-    send_log_to_loki("Запрос текущего времени", level="INFO")
+    send_log_to_loki("Запрос текущего времени", level="INFO", extra_labels={"category": "time"})
     return {"time": datetime.now(pytz.UTC).isoformat()}
 
 
 @app.get("/date")
 def get_date():
-    send_log_to_loki("Запрос текущей даты", level="INFO")
+    send_log_to_loki("Запрос текущей даты", level="INFO", extra_labels={"category": "time"})
     return {"date": datetime.now(pytz.UTC).date().isoformat()}
 
 
 @app.get("/datetime")
 def get_datetime():
-    send_log_to_loki("Запрос текущей даты и времени", level="INFO")
+    send_log_to_loki("Запрос текущей даты и времени", level="INFO", extra_labels={"category": "time"})
     return {"datetime": datetime.now(pytz.UTC).isoformat()}
 
 
