@@ -76,13 +76,14 @@ jobs:
           envs: GITHUB_TOKEN,REGISTRY,IMAGE_NAME,GITHUB_SHA
           script_stop: true
           script: |
+            IMAGE_TAG="ghcr.io/alexsey111/test_mcp:$GITHUB_SHA"
             echo "$GITHUB_TOKEN" | docker login ghcr.io -u Alexsey111 --password-stdin
-            docker pull ghcr.io/$IMAGE_NAME:$GITHUB_SHA
+            docker pull "$IMAGE_TAG"
             docker stop time-server || true
             docker rm time-server || true
             docker run -d \
               --name time-server \
               -p 8000:8000 \
               --restart unless-stopped \
-              ghcr.io/$IMAGE_NAME:$GITHUB_SHA
+              "$IMAGE_TAG"
             docker system prune -f
