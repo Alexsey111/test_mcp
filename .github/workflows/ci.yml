@@ -85,7 +85,8 @@ jobs:
               --name time-server \\
               -p 8001:8000 \\
               --restart unless-stopped \\
-              -e LOKI_URL=http://80.78.246.176:3100/loki/api/v1/push \\
+              --network loki_loki-grafana-network \\
+              -e LOKI_URL=http://loki:3100/loki/api/v1/push \\
               $DEPLOY_IMAGE &&
             docker system prune -f
           "
