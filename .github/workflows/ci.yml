@@ -19,7 +19,7 @@ jobs:
       packages: write
 
     outputs:
-      image_tag: ${{ steps.image_tag.outputs.tag }}
+      image_tag: ghcr.io/alexsey111/test_mcp:${{ github.sha }}
 
     steps:
       - name: Checkout repository
@@ -55,10 +55,6 @@ jobs:
           cache-from: type=gha
           cache-to: type=gha,mode=max
 
-      - name: Output image tag
-        id: image_tag
-        run: echo "tag=ghcr.io/alexsey111/test_mcp:${{ github.sha }}" >> "$GITHUB_OUTPUT"
-
   deploy:
     name: Deploy to server
     runs-on: ubuntu-latest
@@ -74,17 +70,16 @@ jobs:
           key: ${{ secrets.SSH_KEY }}
           port: ${{ secrets.PORT }}
           envs: GITHUB_TOKEN,IMAGE_TAG
-          envs_format: github-action
           script: |
-            echo "$GITHUB_TOKEN" | docker login ghcr.io -u Alexsey111 --password-stdin
-            docker pull "$IMAGE_TAG"
+            echo "${{ secrets.GITHUB_TOKEN }}" | docker login ghcr.io -u Alexsey111 --password-stdin
+            docker pull "${{ needs.build.outputs.image_tag }}"
             docker stop time-server || true
             docker rm time-server || true
             docker run -d \
               --name time-server \
               -p 8000:8000 \
               --restart unless-stopped \
-              "$IMAGE_TAG"
+              "${{ needs.build.outputs.image_tag }}"
             docker system prune -f
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
