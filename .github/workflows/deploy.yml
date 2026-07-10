@@ -65,16 +65,16 @@ jobs:
           username: ${{ secrets.USERNAME }}
           key: ${{ secrets.SSH_KEY }}
           port: ${{ secrets.PORT }}
-          envs: GITHUB_TOKEN
+          envs: GITHUB_TOKEN,REGISTRY,IMAGE_NAME,GITHUB_SHA
           script_stop: true
           script: |
-            echo $GITHUB_TOKEN | docker login ${{ env.REGISTRY }} -u ${{ github.actor }} --password-stdin
-            docker pull ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ github.sha }}
+            echo $GITHUB_TOKEN | docker login $REGISTRY -u ${{ github.actor }} --password-stdin
+            docker pull $REGISTRY/$IMAGE_NAME:$GITHUB_SHA
             docker stop time-server || true
             docker rm time-server || true
             docker run -d \
               --name time-server \
               -p 8000:8000 \
               --restart unless-stopped \
-              ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ github.sha }}
+              $REGISTRY/$IMAGE_NAME:$GITHUB_SHA
             docker system prune -f
