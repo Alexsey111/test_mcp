@@ -65,15 +65,15 @@ jobs:
     steps:
       - name: Deploy via SSH
         uses: appleboy/ssh-action@v1.2.2
+        env:
+          IMAGE_TAG: ghcr.io/alexsey111/test_mcp:${{ github.sha }}
         with:
           host: ${{ secrets.HOST }}
           username: ${{ secrets.USERNAME }}
           key: ${{ secrets.SSH_KEY }}
           port: ${{ secrets.PORT }}
           envs: GITHUB_TOKEN,IMAGE_TAG
-          script_stop: true
           script: |
-            IMAGE_TAG="ghcr.io/alexsey111/test_mcp:${{ github.sha }}"
             echo "$GITHUB_TOKEN" | docker login ghcr.io -u Alexsey111 --password-stdin
             docker pull "$IMAGE_TAG"
             docker stop time-server || true
